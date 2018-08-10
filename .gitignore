@@ -1,0 +1,29 @@
+### Intellij Idea files ###
+
+.idea/
+
+out/
+
+*.iml
+
+*.iws
+
+### CMake ###
+
+cmake-build-*/
+
+CMakeCache.txt
+
+CMakeFiles
+
+CMakeScripts
+
+Testing
+
+cmake_install.cmake
+
+install_manifest.txt
+
+compile_commands.json
+
+CTestTestfile.cmake
