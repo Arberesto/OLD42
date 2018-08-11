@@ -35,6 +35,7 @@ CTestTestfile.cmake
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+Assembly-CSharp
 
 # Visual Studio cache directory
 .vs/
