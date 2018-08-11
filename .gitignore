@@ -31,3 +31,4 @@ CTestTestfile.cmake
 ### Unity ###
 GameProject/Temp/*
 GameProject/.vs/*
+GameProject/Library/*
