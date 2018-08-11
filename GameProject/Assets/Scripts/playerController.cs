@@ -42,11 +42,11 @@ public class playerController : MonoBehaviour {
         // скорость корабля с дампингом 
         _shipSpeed = Mathf.Lerp(_shipSpeed, Mathf.Max(Input.GetAxis("Vertical"), 0), speedDamping);
         // смещаем корабль в перед на нужную величину 
-        transform.position += transform.forward * _shipSpeed * speed * Time.deltaTime;
+        transform.position += transform.right * _shipSpeed * speed * Time.deltaTime;
 
         float rot = Input.GetAxis("Horizontal");
         // вращаем корабль по оси Z 
-        transform.rotation *= Quaternion.AngleAxis(rot * rotationSpeed * Time.deltaTime, new Vector3(0,0,1));
+        transform.rotation *= Quaternion.AngleAxis(-rot * rotationSpeed * Time.deltaTime, new Vector3(0,0,1));
 
         // рассчитываем поврот корпуса корабля с дампингом 
         _shipRotation = Mathf.Lerp(_shipRotation, rot * maxRotationAngle, rotationDamping);
