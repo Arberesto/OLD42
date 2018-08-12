@@ -36,6 +36,8 @@ CTestTestfile.cmake
 [Bb]uilds/
 Assets/AssetStoreTools*
 Assembly-CSharp*
+GameProject/obj
+GameProject/Packages
 
 # Visual Studio cache directory
 .vs/
