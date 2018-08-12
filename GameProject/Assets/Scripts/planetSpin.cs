@@ -4,7 +4,9 @@ using System;
 using UnityEngine;
 
 public class planetSpin : MonoBehaviour {
-	public Transform shipModel;
+    public float orbitX = 1;
+    public float orbitY = 1;
+    public Transform shipModel;
 	private Quaternion _shipDefaultRotation;
 	private float speedSpin = 0.7f;
 	void Start () {
@@ -14,6 +16,6 @@ public class planetSpin : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.rotation *= Quaternion.Euler(0f, 0f, speedSpin);
-		transform.Translate(new Vector3(0.3f, 0.3f, 0.0f));
+		transform.Translate(new Vector3(0.1f * orbitX, 0.1f * orbitY, 0.0f));
 	}
 }
