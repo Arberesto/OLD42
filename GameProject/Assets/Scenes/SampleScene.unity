@@ -654,6 +654,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7550df9030aea4fb0fe89fbdd9c2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundStep: {fileID: 0}
+  soundCrash: {fileID: 0}
+  soundShip: {fileID: 0}
   speed: 20
   speedDamping: 0.1
   rotationSpeed: 90
@@ -695,12 +698,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 626e18df30f831a43825a05b37989ae5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5115ce5cd9140146aa760fa323cc8f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.63, y: 0.91}
+  m_Size: {x: 5, y: 2.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -773,8 +776,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.38, y: 2.32}
-    newSize: {x: 0.63, y: 0.91}
+    oldSize: {x: 5, y: 2.75}
+    newSize: {x: 5, y: 2.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -829,7 +832,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e652b4dfa614d4942a72f5a55795ca60,
+      objectReference: {fileID: 21300000, guid: a8f3a7b0acc251840a1b5de9401db4cd,
         type: 3}
     - target: {fileID: 212902884586104734, guid: 6bc64addd23f8904293bf0e604aa00d8,
         type: 2}
@@ -1015,7 +1018,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 425da2e4008a29a438e2d6b073b8d64a,
+      objectReference: {fileID: 21300000, guid: 87b6a5bd3d2ef0f48a111e2e39ba2c46,
         type: 3}
     - target: {fileID: 212902884586104734, guid: 6bc64addd23f8904293bf0e604aa00d8,
         type: 2}
@@ -1324,7 +1327,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e652b4dfa614d4942a72f5a55795ca60,
+      objectReference: {fileID: 21300000, guid: aaf18e92ed47d0a4d9a811ff49253990,
         type: 3}
     - target: {fileID: 212902884586104734, guid: 6bc64addd23f8904293bf0e604aa00d8,
         type: 2}
