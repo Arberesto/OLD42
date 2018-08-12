@@ -39,11 +39,12 @@ public class playerController : MonoBehaviour {
         // рассчитываем поврот корпуса корабля с дампингом 
         _shipRotation = Mathf.Lerp(_shipRotation, rot * maxRotationAngle, rotationDamping);
         
-        if (Input.GetAxis("Vertical") != 0)
+        //if (Input.GetAxis("Vertical") != 0)
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             animator.SetInteger("condition", 2);
         } 
-        else
+        else if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             animator.SetInteger("condition", 1);
         }
