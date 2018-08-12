@@ -11,7 +11,6 @@ public class planetSpin : MonoBehaviour {
 		_shipDefaultRotation = shipModel.localRotation;
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		transform.rotation *= Quaternion.Euler(0f, 0f, speedSpin);
 		transform.Translate(new Vector3(0.3f, 0.3f, 0.0f));
