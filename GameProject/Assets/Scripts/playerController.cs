@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour {
     Animator animator;
+    public AudioSource soundStep;
+    public AudioSource soundCrash;
+    public AudioSource soundShip;
     public float speed = 5; // максимальная скорость корабля в секунду 
     public float speedDamping = 0.1f; // дампинг скорости 
 
@@ -20,6 +23,11 @@ public class playerController : MonoBehaviour {
     // текущая скорость 
     private float _shipSpeed;
 
+    public void Staps()
+    {
+        soundStep.Play();
+    }
+
 
     void Start () {
         animator = GetComponent<Animator>();
@@ -27,6 +35,7 @@ public class playerController : MonoBehaviour {
     }
 	
 	void Update () {
+
         // скорость корабля с дампингом 
         _shipSpeed = Mathf.Lerp(_shipSpeed, Mathf.Max(Input.GetAxis("Vertical"), 0), speedDamping);
         // смещаем корабль в перед на нужную величину 
@@ -42,10 +51,12 @@ public class playerController : MonoBehaviour {
         //if (Input.GetAxis("Vertical") != 0)
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            soundShip.Play();
             animator.SetInteger("condition", 2);
         } 
         else if (Input.GetKeyUp(KeyCode.UpArrow))
         {
+            soundShip.Stop();
             animator.SetInteger("condition", 1);
         }
     }
