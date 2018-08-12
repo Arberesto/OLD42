@@ -10,8 +10,8 @@ public class playerController : MonoBehaviour {
    // private Rigidbody2D rb;
     private Quaternion quaternion; // значение вращения корпуса по умолчанию 
     private float shipRotation = 0;     // текущий поворот корпуса 
-    private float shipSpeed = 0;
-   // Animator animator;*/
+    private float shipSpeed = 0;*/
+    Animator animator;
     public float speed = 5; // максимальная скорость корабля в секунду 
     public float speedDamping = 0.1f; // дампинг скорости 
 
@@ -34,7 +34,7 @@ public class playerController : MonoBehaviour {
     void Start () {
         // rb = GetComponent<Rigidbody2D>(); // получаем экземпляр Rigitbody2D
         //quaternion = shipModel.localRotation; // сохраняем значение вращения корпуса по умолчанию 
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         _shipDefaultRotation = shipModel.localRotation;
     }
 	
@@ -65,5 +65,14 @@ public class playerController : MonoBehaviour {
         shipRotation = Mathf.Lerp(shipRotation, rot * 30, 0.1f);
         // рассчитываем значение поворота корпуса 
         shipModel.localRotation = quaternion * Quaternion.AngleAxis(shipRotation, Vector3.back);*/
+        if (Input.GetAxis("Vertical") != 0)
+        {
+            //animator.SetInteger("condition", 1);
+            animator.SetInteger("condition", 2);
+        } 
+        else
+        {
+
+        }
     }
 }
