@@ -35,7 +35,7 @@ CTestTestfile.cmake
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
-Assembly-CSharp
+Assembly-CSharp*
 
 # Visual Studio cache directory
 .vs/
@@ -67,3 +67,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+/GameProject/*.csproj
+/GameProject/*.sln
+/GameProject/*.userprefs
+/GameProject/obj
