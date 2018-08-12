@@ -1,16 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System;
+//using System.Random;
 using UnityEngine;
 
 public class planetSpin : MonoBehaviour {
-    public float orbitX = 1;
-    public float orbitY = 1;
-    public Transform shipModel;
+    Transform shipModel;
 	private Quaternion _shipDefaultRotation;
 	private float speedSpin = 0.7f;
-	void Start () {
+	private int orbitX;
+    private int orbitY;
+	void Awake () {
+		shipModel = GetComponent<Transform>();
 		_shipDefaultRotation = shipModel.localRotation;
+	}
+	void Start () {
+		//Random rand = new Random();
+		//orbitX = rand.Next(0,10);
+		//orbitY = rand.Next(0,10);
 	}
 	
 	void Update () {
